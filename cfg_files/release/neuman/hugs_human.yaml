@@ -1,0 +1,121 @@
+seed: 0
+mode: human
+output_path: output
+exp_name: 20240303_1758_release_test
+dataset_path: ''
+detect_anomaly: false
+debug: false
+wandb: false
+eval: false
+bg_color: white
+dataset:
+  name: neuman
+  seq: ["citron", "seattle", "bike", "lab", "jogging", "parkinglot"]
+train:
+  batch_size: 1
+  num_workers: 0
+  num_steps: 14998
+  save_ckpt_interval: 15000
+  val_interval: 1000
+  anim_interval: 15000
+  optim_scene: true
+  save_progress_images: false
+  progress_save_interval: 10
+human:
+  name: hugs_trimlp
+  ckpt: null
+  sh_degree: 0
+  n_subdivision: 2
+  only_rgb: false
+  use_surface: false
+  use_deformer: true
+  init_2d: false
+  disable_posedirs: true
+  res_offset: false
+  rotate_sh: false
+  isotropic: false
+  init_scale_multiplier: 0.5
+  run_init: false
+  estimate_delta: true
+  triplane_res: 256
+  optim_pose: true
+  optim_betas: false
+  optim_trans: true
+  optim_eps_offsets: false
+  activation: relu
+  canon_nframes: 60
+  canon_pose_type: da_pose
+  knn_n_hops: 3
+  lr:
+    wd: 0.0
+    position: 0.00016
+    position_init: 0.00016
+    position_final: 1.6e-06
+    position_delay_mult: 0.01
+    position_max_steps: 30000
+    opacity: 0.05
+    scaling: 0.005
+    rotation: 0.001
+    feature: 0.0025
+    smpl_spatial: 2.0
+    smpl_pose: 0.0001
+    smpl_betas: 0.0001
+    smpl_trans: 0.0001
+    smpl_eps_offset: 0.0001
+    lbs_weights: 0.0
+    posedirs: 0.0
+    percent_dense: 0.01
+    appearance: 0.001
+    geometry: 0.001
+    vembed: 0.001
+    deformation: 0.0001
+    scale_lr_w_npoints: false
+  loss:
+    ssim_w: 0.2
+    l1_w: 0.8
+    lpips_w: 1.0
+    lbs_w: 1000.0
+    humansep_w: 0.0
+    num_patches: 4
+    patch_size: 128
+    use_patches: 1
+  densification_interval: 600
+  opacity_reset_interval: 3000
+  densify_from_iter: 3000
+  densify_until_iter: 15000
+  densify_grad_threshold: 0.0002
+  prune_min_opacity: 0.005
+  densify_extent: 1.0
+  max_n_gaussians: 524288
+  percent_dense: 0.01
+scene:
+  name: scene_gs
+  ckpt: null
+  sh_degree: 3
+  add_bg_points: false
+  num_bg_points: 204800
+  bg_sphere_dist: 5.0
+  clean_pcd: false
+  opt_start_iter: -1
+  lr:
+    percent_dense: 0.01
+    spatial_scale: 1.0
+    position_init: 0.00016
+    position_final: 1.6e-06
+    position_delay_mult: 0.01
+    position_max_steps: 30000
+    opacity: 0.05
+    scaling: 0.005
+    rotation: 0.001
+    feature: 0.0025
+  percent_dense: 0.01
+  densification_interval: 100
+  opacity_reset_interval: 20000
+  densify_from_iter: 500
+  densify_until_iter: 15000
+  densify_grad_threshold: 0.0002
+  prune_min_opacity: 0.005
+  max_n_gaussians: 2097152
+  loss:
+    ssim_w: 0.2
+    l1_w: 0.8
