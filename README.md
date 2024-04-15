@@ -119,12 +119,9 @@ To train HUGS on NeuMan dataset, there are three different modes you can choose 
 
 `cfg_files/release` directory contains the final configuration files we used to train HUGS. Please refer to the [config.py](hugs/cfg/config.py) file to see different config parameters and their meanings.
 
-**Note**: Expect to see slight differences compared to the pretrained models. This is due to the inherent randomness in the rendering process, which makes achieving deterministic results across multiple runs challenging, even when proper seeding is applied.
+**Note**: Expect to see slight differences compared to the pretrained models. This is due to the inherent randomness in the rendering process, which makes achieving deterministic results across multiple runs challenging, even when proper seeding is applied. So it is expected to obtain results slightly different than what is reported in the paper.
 
 # Evaluation and Animation
-
-
-So it is expected to obtain results slightly different than what is reported in the paper.
 
 Here we show how to perform evaluation with the pretrained models on the NeuMan dataset.
 
