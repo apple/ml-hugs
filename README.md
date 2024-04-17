@@ -22,7 +22,7 @@ We tested our system with Ubuntu 22.04.3 using a CUDA 11.7 compatible GPU.
 
 - Clone our repo:
 ```
-git clone --recursive github.com/apple/ml-hugs.git
+git clone --recursive git@github.com:apple/ml-hugs.git
 ```
 
 - Run the setup script to create a conda environment and install the required packages.
