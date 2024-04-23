@@ -5,9 +5,9 @@
 
 #!/bin/bash
 eval "$(conda shell.bash hook)"
-conda create -n hugs_env python=3.8 -y
+conda create -n hugs python=3.8 -y
 
-conda activate hugs_env
+conda activate hugs
 
 conda install -y pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 
@@ -18,3 +18,4 @@ pip install submodules/diff-gaussian-rasterization
 pip install submodules/simple-knn
 
 pip install -r requirements.txt
+pip install git+https://github.com/mattloper/chumpy.git
