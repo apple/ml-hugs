@@ -6,10 +6,10 @@
 #!/bin/bash
 
 # download neuman data
-wget neuman_data.zip
+wget https://docs-assets.developer.apple.com/ml-research/models/hugs/neuman_data.zip
 
 # download pretrained models 
-wget hugs_pretrained_models.zip
+wget https://docs-assets.developer.apple.com/ml-research/models/hugs/hugs_pretrained_models.zip
 
 unzip -qq neuman_data.zip
 unzip -qq hugs_pretrained_models.zip
