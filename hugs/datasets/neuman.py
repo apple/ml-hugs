@@ -349,9 +349,9 @@ class NeumanDataset(torch.utils.data.Dataset):
         
         fovx = 2 * np.arctan(width / (2 * K[0, 0]))
         fovy = 2 * np.arctan(height / (2 * K[1, 1]))
-        zfar = max(cap.far['human'], cap.near['bkg']) + 1.0
-        znear = min(cap.near['human'], cap.near['bkg'])
-        zfar = max(zfar, 100.0)
+        # zfar = max(cap.far['human'], cap.near['bkg']) + 1.0
+        # znear = min(cap.near['human'], cap.near['bkg'])
+        zfar = 100.0 # max(zfar, 100.0)
         znear = 0.01 # min(znear, 0.01)
         
         world_view_transform = torch.from_numpy(cap.cam_pose.world_to_camera).T # torch.eye(4)

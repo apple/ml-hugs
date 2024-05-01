@@ -269,13 +269,13 @@ class NeuManReader():
             scale = 1
 
         scene.scale = scale
-        smpls, world_verts, static_verts, Ts = cls.read_smpls(scene_dir, scene.captures, scale=scale, smpl_type=smpl_type)
-        scene.smpls, scene.verts, scene.static_vert, scene.Ts = smpls, world_verts, static_verts, Ts
-        _, uvs, faces = read_obj(
-            'data/smpl/smpl_uv.obj'
-        )
-        scene.uvs, scene.faces = uvs, faces
-        update_near_far(scene, ['human'], human_range_scale)
+        # smpls, world_verts, static_verts, Ts = cls.read_smpls(scene_dir, scene.captures, scale=scale, smpl_type=smpl_type)
+        # scene.smpls, scene.verts, scene.static_vert, scene.Ts = smpls, world_verts, static_verts, Ts
+        # _, uvs, faces = read_obj(
+        #     'data/smpl/smpl_uv.obj'
+        # )
+        # scene.uvs, scene.faces = uvs, faces
+        # update_near_far(scene, ['human'], human_range_scale)
 
         assert len(scene.captures) > 0
 

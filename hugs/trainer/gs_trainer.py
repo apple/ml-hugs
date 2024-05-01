@@ -641,13 +641,10 @@ class GaussianTrainer():
                     render_mode='human',
                     scaling_modifier=scale_mod,
                 )
-                if self.cfg.mode in ['human', 'human_scene']:
-                    normals = render_pkg["normal_img"]
                 
                 image = render_pkg["render"]
                 
                 progress_imgs.append(image)
-                progress_imgs.append(normals)
                 
                 render_pkg = render_human_scene(
                     data=data, 
@@ -660,7 +657,6 @@ class GaussianTrainer():
                 image = render_pkg["render"]
                 
                 progress_imgs.append(image)
-                progress_imgs.append(normals)
                 
             else:
                 render_pkg = render_human_scene(
